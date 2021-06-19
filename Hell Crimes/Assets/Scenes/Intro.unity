@@ -599,14 +599,13 @@ MonoBehaviour:
   DescBox: {fileID: 942109957}
   textSpeed: 0.025
   Desc:
-  - "Dear Detective Dick Angel, I have received a very important request to enforce
-    a justice system within the realm of Hell. As the omnipresent ruler that I am, 
-    I was obligated to agree.  For millennia, the Vampire Royal Family, Vilonette,
+  - "Dear Detective Dick Angel, <\\n> I have received a very important request to
+    enforce a justice system within the realm of Hell. As the omnipresent ruler that
+    I am,  I was obligated to agree.  For millennia, the Vampire Royal Family, Vilonette,
     has clashed with the Snarlthorn Witch\u2019s Coven within Hell. Recently a young
     witch has vanished. The Witches have  placed the blame upon the Vilonettes, with
     both sides threatening war.  A neutral third-party is needed  to solve this,
     and who better to  solve this mystery than you.   I\u2019m counting on you,  "
-  - 
 --- !u!4 &1196766766
 Transform:
   m_ObjectHideFlags: 0

@@ -6,26 +6,34 @@ using UnityEngine.UI;
 public class TextScript : MonoBehaviour
 {
     public GameObject DialogueUI, Dick, Witch, dBoxWitch, dBoxDick, dBoxExamine;
+    public GameObject Letters;
     public Text textBox;
     private int index;
     public float textSpeed;
-    public string[] Sentences;
+    public List<string> introDial, LettersDial, RiddleDial;
+    public List<string> POKERDial, STOOLDial,  SCISSORSDial,  DAGGERDial,  KEYDial,  CHALICEDial, EYEDial;
+    public List<string> CarpetDial, LockedGoatDial, ReachGoatDial, NoEyeDial, ClothDial, OpenBagDial, LockBagDial;
+    public List<string> CurrentList;
     public GameObject nextButton;
-    public GameObject PokerInv, DaggerInv, StoolInv, EyeInv, ScissorsInv, FileInv, ChaliceInv;
-    private GameObject Poker;
+    // Set these active
+    public GameObject PokerInv, DaggerInv, StoolInv, EyeInv, ScissorsInv, FileInv, ChaliceInv, carpetTurned, noEyeGoat, hangerMove;
+    // Delete these
+    public GameObject POKER, STOOL, Cloth, carpetCorner, DAGGER, Goat, Hanger, KEY, SCISSORS;
+    public bool keyChecker, pokerChecker, stoolChecker, daggerChecker, scissorsChecker, eyeChecker;
+    // Interactables
     DialogueList dialgoueList; 
 
 
     void Start()
     {
-        Poker = GameObject.Find("Poker");
+        CurrentList = introDial;
         StartCoroutine(Type());
         //textBox.text = dialgoueList.GetComponent<Intro>();
     }
 
     void Update()
     {
-        if (textBox.text == Sentences[index])
+        if (textBox.text == CurrentList[index])
         {
             nextButton.SetActive(true);
             //Time.timeScale = 0.00001f;
@@ -33,7 +41,8 @@ public class TextScript : MonoBehaviour
     }
     IEnumerator Type ()
     {
-        foreach(char letter in Sentences[index].ToCharArray())
+        DialogueUI.SetActive(true);
+        foreach(char letter in CurrentList[index].ToCharArray())
         {
             textBox.text += letter;
             yield return new WaitForSeconds(textSpeed);
@@ -43,7 +52,7 @@ public class TextScript : MonoBehaviour
     public void NextButton ()
     {
         nextButton.SetActive(false);
-        if (index < Sentences.Length -1)
+        if (index < CurrentList.Count -1)
         {
             index++;
             textBox.text = "";
@@ -53,15 +62,75 @@ public class TextScript : MonoBehaviour
         else
         {
             textBox.text = "";
+            DialogueUI.SetActive(false);
         }
     }
-    public void PokerText ()
+
+    public void LetterText ()
     {
-        StartCoroutine(pokerText());
+        StartCoroutine(objectText(LettersDial, null, null));
+    }
+    
+    public void RiddleText()
+    {
+        StartCoroutine(objectText(RiddleDial, null, null));
     }
 
-    public IEnumerator pokerText ()
-    {        
+    public void PokerText ()
+    {
+        pokerChecker = true;
+        StartCoroutine(objectText(POKERDial, PokerInv, POKER));
+    }
+    public void StoolText()
+    {
+        stoolChecker = true;
+        StartCoroutine(objectText(STOOLDial, StoolInv, STOOL));
+    }
+    public void Carpet1Text()
+    {
+        SCISSORS.SetActive(true);
+        StartCoroutine(objectText(CarpetDial, carpetTurned, carpetCorner));
+    }
+    public void ScissorsText()
+    {
+        scissorsChecker = true;
+        StartCoroutine(objectText(SCISSORSDial, ScissorsInv, SCISSORS));
+    }
+    public void ClothText()
+    {
+        //Only if player has stool
+        StartCoroutine(objectText(ClothDial, DAGGER, Cloth));
+    }
+    public void DaggerText()
+    {
+        StartCoroutine(objectText(DAGGERDial, DaggerInv, DAGGER));
+    }
+
+    public void LockGoatText ()
+    {
+        if (stoolChecker && !daggerChecker && !scissorsChecker && !pokerChecker) 
+        {
+            StartCoroutine(objectText(NoEyeDial, null, null));
+        }
+
+        else if (stoolChecker && (daggerChecker || scissorsChecker || pokerChecker))
+        {
+            StartCoroutine(objectText(ReachGoatDial, EyeInv, Goat));
+            noEyeGoat.SetActive(true);
+            eyeChecker = true;
+        }
+        else
+        {
+            StartCoroutine(objectText(LockedGoatDial, null, null));
+        }
+
+    }
+
+    public IEnumerator objectText (List<string> input, GameObject objectToTurnOn, GameObject objectToDestroy)
+    {
+
+        CurrentList = input;
+        index = 0;
         textBox.text = "";
         DialogueUI.SetActive(true);
         Witch.SetActive(false);
@@ -69,13 +138,18 @@ public class TextScript : MonoBehaviour
         dBoxWitch.SetActive(false);
         dBoxDick.SetActive(false);
         dBoxExamine.SetActive(true);
-
-        //Time.timeScale = 0.00001f;
         StartCoroutine(Type());
-        textBox.text = "Hmmm, a fire poker... Sadly not very dangerous, but could be a handy tool.";
         yield return new WaitForSeconds(3f);
-        PokerInv.SetActive(true);
-        Destroy(Poker);
+
+        if (objectToTurnOn != null)
+        {
+            objectToTurnOn.SetActive(true);
+        }
+
+        if (objectToDestroy != null)
+        {
+            Destroy(objectToDestroy);
+        }
     }
 
 
