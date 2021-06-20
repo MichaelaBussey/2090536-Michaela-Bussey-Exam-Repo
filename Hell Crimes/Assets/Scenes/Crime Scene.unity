@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 166424560}
   - component: {fileID: 166424562}
+  - component: {fileID: 166424563}
   - component: {fileID: 166424561}
   m_Layer: 0
   m_Name: cloth
@@ -153,8 +154,8 @@ Transform:
   m_Father: {fileID: 766538089}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &166424561
-PolygonCollider2D:
+--- !u!61 &166424561
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -166,7 +167,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.41613913}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -176,165 +177,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 9.25, y: -4.7599998}
-      - {x: 9.46, y: -4.5499997}
-      - {x: 9.61, y: -4.27}
-      - {x: 9.639999, y: -4.17}
-      - {x: 9.639999, y: -3.75}
-      - {x: 9.62, y: -3.6}
-      - {x: 9.58, y: -3.47}
-      - {x: 9.55, y: -3.31}
-      - {x: 9.55, y: -3.1699998}
-      - {x: 9.58, y: -2.78}
-      - {x: 9.62, y: -2.58}
-      - {x: 9.719999, y: -2.09}
-      - {x: 9.9, y: -1.3399999}
-      - {x: 9.95, y: -1.03}
-      - {x: 9.98, y: -0.82}
-      - {x: 9.98, y: -0.53999996}
-      - {x: 9.969999, y: -0.41}
-      - {x: 10.03, y: -0.089999996}
-      - {x: 10.05, y: 0.04}
-      - {x: 10.05, y: 0.55}
-      - {x: 10.01, y: 0.82}
-      - {x: 9.98, y: 0.94}
-      - {x: 9.87, y: 1.31}
-      - {x: 9.74, y: 1.5699999}
-      - {x: 9.429999, y: 2.02}
-      - {x: 9.15, y: 2.4299998}
-      - {x: 9.01, y: 2.6799998}
-      - {x: 8.83, y: 3.01}
-      - {x: 8.639999, y: 3.28}
-      - {x: 8.4, y: 3.6}
-      - {x: 8.04, y: 4.1}
-      - {x: 7.8199997, y: 4.37}
-      - {x: 7.5299997, y: 4.68}
-      - {x: 7.33, y: 4.87}
-      - {x: 7.0699997, y: 5.0699997}
-      - {x: 7.0299997, y: 5.0699997}
-      - {x: 6.99, y: 5.04}
-      - {x: 7, y: 4.93}
-      - {x: 6.89, y: 5.0099998}
-      - {x: 6.81, y: 5}
-      - {x: 6.56, y: 4.98}
-      - {x: 5.8399997, y: 4.95}
-      - {x: 4.62, y: 4.9}
-      - {x: 2.7, y: 4.8199997}
-      - {x: 2.23, y: 4.7999997}
-      - {x: 1.54, y: 4.77}
-      - {x: 1.3, y: 4.7599998}
-      - {x: 0.84, y: 4.74}
-      - {x: 0.59999996, y: 4.73}
-      - {x: -0.089999996, y: 4.7}
-      - {x: -0.31, y: 4.69}
-      - {x: -1, y: 4.66}
-      - {x: -1.22, y: 4.65}
-      - {x: -1.91, y: 4.62}
-      - {x: -2.1299999, y: 4.61}
-      - {x: -2.36, y: 4.6}
-      - {x: -2.58, y: 4.5899997}
-      - {x: -2.81, y: 4.58}
-      - {x: -3.03, y: 4.5699997}
-      - {x: -3.26, y: 4.56}
-      - {x: -3.48, y: 4.5499997}
-      - {x: -3.7099998, y: 4.54}
-      - {x: -4.81, y: 4.49}
-      - {x: -5.23, y: 4.47}
-      - {x: -5.45, y: 4.46}
-      - {x: -6.29, y: 4.42}
-      - {x: -6.69, y: 4.4}
-      - {x: -7.23, y: 4.38}
-      - {x: -7.3199997, y: 4.42}
-      - {x: -7.52, y: 4.18}
-      - {x: -7.6299996, y: 4}
-      - {x: -7.73, y: 3.8}
-      - {x: -7.9199996, y: 3.32}
-      - {x: -7.99, y: 3.05}
-      - {x: -8.09, y: 2.84}
-      - {x: -8.17, y: 2.6599998}
-      - {x: -8.25, y: 2.37}
-      - {x: -8.33, y: 1.93}
-      - {x: -8.349999, y: 1.75}
-      - {x: -8.349999, y: 1.27}
-      - {x: -8.34, y: 1.0799999}
-      - {x: -8.32, y: 0.76}
-      - {x: -8.29, y: 0.48}
-      - {x: -8.24, y: 0.17}
-      - {x: -8.2, y: -0.02}
-      - {x: -8.17, y: -0.17}
-      - {x: -8.09, y: -0.35999998}
-      - {x: -8, y: -0.55}
-      - {x: -7.6699996, y: -1.17}
-      - {x: -7.6699996, y: -1.1899999}
-      - {x: -7.58, y: -1.39}
-      - {x: -7.5699997, y: -1.63}
-      - {x: -7.5499997, y: -1.9399999}
-      - {x: -7.56, y: -1.9499999}
-      - {x: -7.58, y: -2.25}
-      - {x: -7.5699997, y: -2.78}
-      - {x: -7.5299997, y: -3.1399999}
-      - {x: -7.5099998, y: -3.25}
-      - {x: -7.46, y: -3.46}
-      - {x: -7.35, y: -3.77}
-      - {x: -7.25, y: -3.99}
-      - {x: -7.25, y: -4.08}
-      - {x: -7.16, y: -4.24}
-      - {x: -7.1099997, y: -4.2999997}
-      - {x: -7.04, y: -4.37}
-      - {x: -6.71, y: -4.58}
-      - {x: -6.71, y: -4.63}
-      - {x: -6.62, y: -4.73}
-      - {x: -6.5699997, y: -4.72}
-      - {x: -5.93, y: -4.72}
-      - {x: -5.92, y: -4.73}
-      - {x: -5.58, y: -4.7599998}
-      - {x: -5.0899997, y: -4.71}
-      - {x: -4.69, y: -4.7}
-      - {x: -4.4, y: -4.68}
-      - {x: -4.31, y: -4.67}
-      - {x: -3.9399998, y: -4.66}
-      - {x: -3.9399998, y: -4.68}
-      - {x: -3.48, y: -4.67}
-      - {x: -3, y: -4.65}
-      - {x: -2.6499999, y: -4.64}
-      - {x: -2.37, y: -4.63}
-      - {x: -1.8299999, y: -4.62}
-      - {x: -1.67, y: -4.61}
-      - {x: -1.66, y: -4.6}
-      - {x: -0.88, y: -4.6}
-      - {x: -0.72999996, y: -4.5899997}
-      - {x: -0.19, y: -4.58}
-      - {x: 0.25, y: -4.5699997}
-      - {x: 0.71999997, y: -4.56}
-      - {x: 0.71999997, y: -4.5699997}
-      - {x: 1.09, y: -4.58}
-      - {x: 1.4, y: -4.58}
-      - {x: 1.56, y: -4.5899997}
-      - {x: 1.8399999, y: -4.6}
-      - {x: 2.6, y: -4.6}
-      - {x: 2.61, y: -4.61}
-      - {x: 2.78, y: -4.62}
-      - {x: 3.24, y: -4.63}
-      - {x: 3.6799998, y: -4.67}
-      - {x: 3.99, y: -4.69}
-      - {x: 4.39, y: -4.7}
-      - {x: 4.67, y: -4.72}
-      - {x: 5.1099997, y: -4.72}
-      - {x: 5.68, y: -4.71}
-      - {x: 5.69, y: -4.72}
-      - {x: 6.1099997, y: -4.73}
-      - {x: 6.49, y: -4.74}
-      - {x: 6.8999996, y: -4.77}
-      - {x: 7.2, y: -4.7799997}
-      - {x: 7.52, y: -4.81}
-      - {x: 7.94, y: -4.88}
-      - {x: 8.26, y: -4.91}
-      - {x: 8.809999, y: -4.91}
-      - {x: 8.84, y: -4.89}
-      - {x: 9.04, y: -4.83}
-      - {x: 9.19, y: -4.7999997}
+  serializedVersion: 2
+  m_Size: {x: 20.48, y: 7.44073}
+  m_EdgeRadius: 0
 --- !u!212 &166424562
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -385,6 +230,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &166424563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166424559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eba9956280353043b6d731c750c464c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PokerClicked: 0
+  textScript: {fileID: 812320527}
 --- !u!1 &186373802
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,8 +476,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 490.02, y: -260}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 482.99997, y: -179}
+  m_SizeDelta: {x: 91.91437, y: 91.91437}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &211124923
 BoxCollider2D:
@@ -872,7 +731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 490.02, y: 53}
+  m_AnchoredPosition: {x: 488.82, y: -9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &302547691
@@ -1276,6 +1135,7 @@ GameObject:
   - component: {fileID: 431962023}
   - component: {fileID: 431962024}
   - component: {fileID: 431962025}
+  - component: {fileID: 431962026}
   m_Layer: 0
   m_Name: KEY
   m_TagString: Untagged
@@ -1373,6 +1233,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.067663, y: 19.023458}
   m_EdgeRadius: 0
+--- !u!114 &431962026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431962022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eba9956280353043b6d731c750c464c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PokerClicked: 0
+  textScript: {fileID: 812320527}
 --- !u!1 &434265591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,8 +1404,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 237.4, y: -52.4}
-  m_SizeDelta: {x: 605.24133, y: 712.4757}
+  m_AnchoredPosition: {x: 237.4, y: -1.5811}
+  m_SizeDelta: {x: 605.24133, y: 610.83777}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &577573342
 MonoBehaviour:
@@ -1758,6 +1632,7 @@ GameObject:
   - component: {fileID: 635459640}
   - component: {fileID: 635459641}
   - component: {fileID: 635459642}
+  - component: {fileID: 635459643}
   m_Layer: 0
   m_Name: BAG
   m_TagString: Untagged
@@ -2046,6 +1921,20 @@ PolygonCollider2D:
       - {x: -0.65999997, y: -9.15}
       - {x: -0.06, y: -9.15}
       - {x: -0.049999997, y: -9.139999}
+--- !u!114 &635459643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635459639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eba9956280353043b6d731c750c464c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PokerClicked: 0
+  textScript: {fileID: 812320527}
 --- !u!1 &682811739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,6 +2006,7 @@ GameObject:
   - component: {fileID: 703382442}
   - component: {fileID: 703382443}
   - component: {fileID: 703382444}
+  - component: {fileID: 703382445}
   m_Layer: 0
   m_Name: goat
   m_TagString: Untagged
@@ -2214,6 +2104,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.2758465, y: 9.544705}
   m_EdgeRadius: 0
+--- !u!114 &703382445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703382441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eba9956280353043b6d731c750c464c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PokerClicked: 0
+  textScript: {fileID: 812320527}
 --- !u!1 &705964756
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,6 +2192,129 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &726981881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 726981882}
+  - component: {fileID: 726981885}
+  - component: {fileID: 726981884}
+  - component: {fileID: 726981883}
+  m_Layer: 0
+  m_Name: hangerMoved
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &726981882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726981881}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.22, y: 2.302, z: 0}
+  m_LocalScale: {x: 0.12047936, y: 0.12047936, z: 0.12047936}
+  m_Children: []
+  m_Father: {fileID: 766538089}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &726981883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726981881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eba9956280353043b6d731c750c464c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PokerClicked: 0
+  textScript: {fileID: 812320527}
+--- !u!61 &726981884
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726981881}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.4695468, y: -0.14698267}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.48, y: 20.48}
+    newSize: {x: 20.48, y: 20.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.331731, y: 18.03025}
+  m_EdgeRadius: 0
+--- !u!212 &726981885
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726981881}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 21300000, guid: 8384231fd7cb76340a6a58feb0ca9044, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 20.48, y: 20.48}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &731023449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2434,6 +2461,7 @@ Transform:
   - {fileID: 1900540683}
   - {fileID: 166424560}
   - {fileID: 1459508889}
+  - {fileID: 726981882}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2476,28 +2504,110 @@ MonoBehaviour:
   textBox: {fileID: 759136188}
   textSpeed: 0.015
   introDial:
-  - hah
+  - 'Gillian:  Why hello, my dear Dick. I hear it''s been a long journey from Heaven
+    for you. Thank you for-'
+  - Yeah yeah, old geezer. I don't have the time for fuckin chitchat, okay?
+  - 'Gillian: I see... Well, my dearest daughter has gone missing. We are aware of
+    the Vampiric vanishing rituals enacted within these walls.'
+  - "Gillian: Not much is known about this ritual. I\u2019ve heard that re-enacting
+    the steps can resummon the victim, however. "
+  - 'Gillian: In their hurry to flee the scene, the Vilonettes might have left some
+    vital clues and tools here that can help us.'
+  - Dumbasses, eheh! this should be a piece of cake.
+  - 'Gillian: I suggest examining those letters over on the centre coffee table first.'
   LettersDial:
-  - letter
-  RiddleDial: []
+  - "It\u2019s a stack of envelopes, practically screaming to be investigated; how
+    kind of them. Hmm\u2026 Ah this one looks ominous, it says: "
+  - "\u201CThe peasant routinely goes to the lava creek for herbal gathering every
+    Wednesday, alone \u2013 what an imbecile\u2026"
+  - "She is of great use to us, no matter her poverty. She\u2019ll weaken the Coven\u2019s
+    defences and can reveal vital information of their practises to us\u2026"
+  - "Using your bat form and the growth vial, you can fly across to seize her and
+    carry her back to the ritual chamber\u2026"
+  - 'Do not forget the three items required to imprison her in the vanishing realm.
+    Refer to the crystallum orbis for guidance. '
+  - "Good Luck young Prince, From King Vilonette.\u201D "
+  - 'What a pretentious lot. I suppose this crystallum orbis could aid me before
+    I start looking for the three items. '
+  RiddleDial:
+  - "This must be the crystali-thingamajig. There\u2019s candles and cards here\u2026
+    oh and what\u2019s this?"
+  - "\u201COne might not but showeth their dedication by spilling their blood into
+    only but a royal chalice\u2026  "
+  - "\u201CWith the blessing o\u2019 our rul'r, his eyes wilt beest within us! rejoiceth
+    f'r the divine blessing of our god's almighty pow'rs!\u201D"
+  - 'Hey uh, what the fuck? Get outta here with that cryptic bullshit.  '
+  - "I guess it does hint at the three items required for the ritual though. Let\u2019s
+    get exploring."
+  OutroDial:
+  - That was pretty fuckin easy, if I do say so myself.
+  - 'Gillian: I''m just glad you cracked the case. Let''s go resummon my darling
+    Evelyn, come with me. '
   POKERDial:
-  - yey
+  - 'This fire poker looks pretty handy. Not very sharp though, doubt it would hurt
+    anybody, sadly. Let me nab it in case I need it. '
   STOOLDial:
-  - hee
-  SCISSORSDial: []
-  DAGGERDial: []
-  KEYDial: []
-  CHALICEDial: []
-  EYEDial: []
-  CarpetDial: []
+  - "I swear I\u2019m not short, okay? Buuut this stool looks like it could give
+    me a decent boost to reach those high places at the back. "
+  SCISSORSDial:
+  - "Aye, well looky here! Nice and sharp, could definitely snip myself with these.
+    They\u2019ll be useful to draw blood for the ritual. "
+  DAGGERDial:
+  - 'Wow, this baddie is still wet with blood... '
+  - A perfect tool to draw blood with. Just remind me to wipe that scummy vampire
+    blood off before I use it.
+  KEYDial:
+  - Oho, smart guy huh? These are pretty small keys, they have an interesting symbol
+    on them...
+  CarpetDial:
+  - "They really bolted outta here, even left this boujee Persian rag all nasty.
+    Wait a second, what\u2019s this? "
   LockedGoatDial:
-  - bruh
+  - Look at that bug-eyed beast up there. Ugh, it's giving me the creeps.
+  - It might be worth inspecting further, but I can't seem to reach it...
   ReachGoatDial:
-  - lol
-  NoEyeDial: []
-  ClothDial: []
-  OpenBagDial: []
-  LockBagDial: []
+  - Ah yes, I can use a tool to chip the eye out.
+  - This is probably what the riddle meant by "his eyes wilt beest within us"
+  - Wait, does this mean I... need to eat this?! Oh God...
+  NoEyeDial:
+  - Ah yes I can get a better look at this now with my stool.
+  - It seems this goat's left eye has been freshly poked. It almost looks real?
+  - There's blood stains around the socket, maybe I need a tool to help me scrape
+    it out?
+  NoSClothDial:
+  - Hey, look up there! Theres a grimey rag up there. It seems that there's an item
+    underneath it.
+  - If only I could reach it...
+  SClothDial:
+  - 'With my trusty stool, I can pull off this cloth! '
+  - Ooh, what do we have here?
+  OpenBagDial:
+  - 'These keys have the same symbol as this sticker on the bag, thanks for help,
+    losers! '
+  - Well, well, look what we have in here! This sure looks regal alright! This must
+    be the chalice.
+  LockBagDial:
+  - "Looks pretty spiffy, like a business suitcase maybe? It makes a rattling sound
+    but it\u2019s locked\u2026"
+  - ' Where would a businessman keep his keys?'
+  HangerDial:
+  - Lemme check this jacket over for any valuables...
+  - Feels like I'm a pickpocketer on the streets of New York eheh... wait what's
+    this behind here?
+  NotesDial: []
+  SwordDial: []
+  PaperDial: []
+  BooksDial: []
+  CabinateDial: []
+  PaintingDial: []
+  HeartDial: []
+  ChaliceInvDial: []
+  EyeInvDial: []
+  PokerInvDial: []
+  StoolInvDial: []
+  ScissorsInvDial: []
+  DaggerInvDial: []
+  KeyInvDial: []
   CurrentList: []
   nextButton: {fileID: 381905240}
   PokerInv: {fileID: 844747053}
@@ -2507,24 +2617,28 @@ MonoBehaviour:
   ScissorsInv: {fileID: 1387824130}
   FileInv: {fileID: 1180609637}
   ChaliceInv: {fileID: 211124921}
-  carpetTurned: {fileID: 0}
+  KeyInv: {fileID: 2032221780}
+  carpetTurned: {fileID: 2071565885}
   noEyeGoat: {fileID: 581152280}
-  hangerMove: {fileID: 0}
+  hangerMove: {fileID: 726981881}
+  keyHidden: {fileID: 1700099420}
   POKER: {fileID: 2067778650}
   STOOL: {fileID: 364867877}
-  Cloth: {fileID: 0}
-  carpetCorner: {fileID: 0}
-  DAGGER: {fileID: 0}
+  Cloth: {fileID: 166424559}
+  carpetCorner: {fileID: 2128248071}
+  DAGGER: {fileID: 1900540682}
   Goat: {fileID: 703382441}
-  Hanger: {fileID: 0}
-  KEY: {fileID: 0}
-  SCISSORS: {fileID: 0}
+  Hanger: {fileID: 1459508888}
+  KEY: {fileID: 431962022}
+  SCISSORS: {fileID: 1128846407}
+  isTyping: 0
   keyChecker: 0
   pokerChecker: 0
   stoolChecker: 0
   daggerChecker: 0
   scissorsChecker: 0
   eyeChecker: 0
+  chaliceChecker: 0
 --- !u!4 &812320528
 Transform:
   m_ObjectHideFlags: 0
@@ -2637,8 +2751,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 490.02, y: 157.29}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 488.82, y: 172.74}
+  m_SizeDelta: {x: 88.35684, y: 88.35684}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &845405368
 GameObject:
@@ -3077,6 +3191,7 @@ GameObject:
   - component: {fileID: 1128846408}
   - component: {fileID: 1128846409}
   - component: {fileID: 1128846410}
+  - component: {fileID: 1128846411}
   m_Layer: 0
   m_Name: SCISSORS
   m_TagString: Untagged
@@ -3164,6 +3279,20 @@ CircleCollider2D:
   m_Offset: {x: -0.28446555, y: -1.402834}
   serializedVersion: 2
   m_Radius: 7.495625
+--- !u!114 &1128846411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128846407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eba9956280353043b6d731c750c464c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PokerClicked: 0
+  textScript: {fileID: 812320527}
 --- !u!1 &1135108148
 GameObject:
   m_ObjectHideFlags: 0
@@ -3273,8 +3402,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 492, y: 256.9}
-  m_SizeDelta: {x: 99.215225, y: 99.215225}
+  m_AnchoredPosition: {x: 489.54, y: 260.38}
+  m_SizeDelta: {x: 86.924225, y: 86.924225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1180609639
 MonoBehaviour:
@@ -3524,7 +3653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 490.02, y: 53}
+  m_AnchoredPosition: {x: 488.82, y: 85}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1387824132
@@ -3760,6 +3889,7 @@ GameObject:
   - component: {fileID: 1459508889}
   - component: {fileID: 1459508891}
   - component: {fileID: 1459508890}
+  - component: {fileID: 1459508892}
   m_Layer: 0
   m_Name: hanger
   m_TagString: Untagged
@@ -3857,6 +3987,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1459508892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459508888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eba9956280353043b6d731c750c464c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PokerClicked: 0
+  textScript: {fileID: 812320527}
 --- !u!1 &1665096451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4552,7 +4696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 476.5, y: -157.7}
+  m_AnchoredPosition: {x: 471, y: -262}
   m_SizeDelta: {x: 152.33064, y: 155.04883}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1877818713
@@ -4629,6 +4773,7 @@ GameObject:
   - component: {fileID: 1900540683}
   - component: {fileID: 1900540685}
   - component: {fileID: 1900540684}
+  - component: {fileID: 1900540686}
   m_Layer: 0
   m_Name: DAGGER
   m_TagString: Untagged
@@ -5113,6 +5258,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1900540686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900540682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eba9956280353043b6d731c750c464c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PokerClicked: 0
+  textScript: {fileID: 812320527}
 --- !u!1 &1917138788
 GameObject:
   m_ObjectHideFlags: 0
@@ -5510,7 +5669,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.045}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 483, y: -59}
+  m_AnchoredPosition: {x: 483, y: -94}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &2016447261
@@ -5602,17 +5761,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032221780}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.2862097, w: 0.9581671}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 705964757}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.262}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 490.02, y: -257}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 483, y: -179}
+  m_SizeDelta: {x: 83.82872, y: 83.82872}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &2032221782
 BoxCollider2D:

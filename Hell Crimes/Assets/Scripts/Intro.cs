@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class Intro : MonoBehaviour
 {
-    public GameObject Tag, Open, UI;
+    public GameObject Tag, Open, UI, location;
     public Text DescBox;
-    private int index;
+    //private int index;
     public float textSpeed;
-    public string [] Desc;
+    //public string [] Desc;
 
     void Start()
     {
@@ -23,20 +23,24 @@ public class Intro : MonoBehaviour
         {
             Open.SetActive(true);
             UI.SetActive(true);
-            Tag.SetActive(false);
-            StartCoroutine(Type());
+            Destroy(Tag);
+            //StartCoroutine(Type());
         }
     }
 
-    IEnumerator Type()
+    /*IEnumerator Type()
     {
         foreach (char letter in Desc[index].ToCharArray())
         {
             DescBox.text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
+    }*/
+    public void Location ()
+    {
+        Destroy(UI);
+        location.SetActive(true);
     }
-
     public void Begin ()
     {
         SceneManager.LoadScene(2);
