@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class TextScript : MonoBehaviour
 {
-    public GameObject DialogueUI, Dick, Witch, dBoxWitch, dBoxDick, dBoxExamine;
-    public GameObject Letters;
+    public GameObject DialogueUI, Dick, Witch, dBoxWitch, dBoxDick, dBoxExamine, PaperCanvas, PaintingCanvas, FileCanvas;
+    public GameObject Letters, ReRiddle;
     public Text textBox;
     private int index;
     public float textSpeed;
     // Necessary dialogue
-    public List<string> introDial, LettersDial, RiddleDial, OutroDial;
+    public List<string> introDial, LettersDial, RiddleDial, ReRiddleDial, OutroDial;
     // Ritual item dialogue
     public List<string> POKERDial, STOOLDial, SCISSORSDial, DAGGERDial, KEYDial;
     // Item progress dialogue
@@ -19,13 +19,13 @@ public class TextScript : MonoBehaviour
     // Hints dialogue
     public List<string> NotesDial, SwordDial, PaperDial, BooksDial, CabinateDial, PaintingDial, HeartDial; 
     // Inventory dialogue
-    public List<string> ChaliceInvDial, EyeInvDial, PokerInvDial, StoolInvDial, ScissorsInvDial, DaggerInvDial, KeyInvDial;
+    public List<string> ChaliceInvDial, EyeInvDial, PokerInvDial, StoolInvDial,FileInvDial, ScissorsInvDial, DaggerInvDial, KeyInvDial;
     public List<string> CurrentList;
     public GameObject nextButton;
     // Set these active
-    public GameObject PokerInv, DaggerInv, StoolInv, EyeInv, ScissorsInv, FileInv, ChaliceInv, KeyInv, carpetTurned, noEyeGoat, hangerMove, keyHidden;
+    public GameObject PokerInv, DaggerInv, StoolInv, EyeInv, ScissorsInv, ChaliceInv, KeyInv, carpetTurned, noEyeGoat, hangerMove, keyHidden;
     // Delete these
-    public GameObject POKER, STOOL, Cloth, carpetCorner, DAGGER, Goat, Hanger, KEY, SCISSORS;
+    public GameObject POKER, STOOL, Cloth, carpetCorner, DAGGER, Goat, Hanger, KEY, SCISSORS, Riddle, riddleGlow, letterGlow;
     public bool isTyping, keyChecker, pokerChecker, stoolChecker, daggerChecker, scissorsChecker, eyeChecker, chaliceChecker;
     // Interactables
     DialogueList dialgoueList; 
@@ -33,6 +33,7 @@ public class TextScript : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(WaitGlow());
         CurrentList = introDial;
         StartCoroutine(Type());
         //textBox.text = dialgoueList.GetComponent<Intro>();
@@ -90,11 +91,16 @@ public class TextScript : MonoBehaviour
 
     public void LetterText ()
     {
-        StartCoroutine(objectText(LettersDial, null, null));
+        StartCoroutine(objectText(LettersDial, riddleGlow, letterGlow));
     }
     public void RiddleText()
     {
-        StartCoroutine(objectText(RiddleDial, null, null));
+        StartCoroutine(objectText(RiddleDial, ReRiddle, Riddle));
+        riddleGlow.SetActive(false);
+    }
+    public void ReRiddleText()
+    {
+        StartCoroutine(objectText(ReRiddleDial, null, null));
     }
 
     public void PokerText ()
@@ -162,7 +168,6 @@ public class TextScript : MonoBehaviour
         StartCoroutine(objectText(KEYDial, KeyInv, KEY));
     }
 
-
     public void LockGoatText ()
     {
         if (stoolChecker && !daggerChecker && !scissorsChecker && !pokerChecker) 
@@ -183,9 +188,97 @@ public class TextScript : MonoBehaviour
 
     }
 
+    public void NotesText()
+    {
+        PaperCanvas.SetActive(true);
+        StartCoroutine(objectText(NotesDial, null, null)); //fix to reveal close up of notes
+    }
+    public void SwordText()
+    {
+        StartCoroutine(objectText(SwordDial, null, null));
+    }
+    public void PaintingText()
+    {
+        PaintingCanvas.SetActive(true);
+        StartCoroutine(objectText(PaintingDial, null, null)); //fix to reveal close up of painting
+    }
+    public void BooksText()
+    {
+        StartCoroutine(objectText(BooksDial, null, null)); //fix to reveal close up of books
+    }
+    public void PaperText()
+    {
+        StartCoroutine(objectText(PaperDial, null, null));
+    }
+    public void CabinetText()
+    {
+        StartCoroutine(objectText(CabinateDial, null, null));
+    }
+    public void HeartText()
+    {
+        StartCoroutine(objectText(HeartDial, null, null));
+    }
+
+    public void FileInvText()
+    {
+        if (isTyping == false)
+        {
+            StartCoroutine(objectText(FileInvDial, FileCanvas, null));
+        }
+    }
+    public void PokerInvText()
+    {
+        if (isTyping == false)
+        {
+            StartCoroutine(objectText(PokerInvDial, null, null));
+        }
+    }
+    public void DaggerInvText()
+    {
+        if (isTyping == false)
+        {
+            StartCoroutine(objectText(DaggerInvDial, null, null));
+        }
+    }
+    public void ScissorsInvText()
+    {
+        if (isTyping == false)
+        {
+        StartCoroutine(objectText(ScissorsInvDial, null, null));
+        }
+    }
+    public void KeysInvText()
+    {
+        if (isTyping == false)
+        {
+        StartCoroutine(objectText(KeyInvDial, null, null));
+        }
+    }
+    public void StoolInvText()
+    {
+        if (isTyping == false)
+        {
+        StartCoroutine(objectText(StoolInvDial, null, null));
+        }
+    }
+    public void ChaliceInvText()
+    {
+        if (isTyping == false)
+        {
+        StartCoroutine(objectText(ChaliceInvDial, null, null));
+        }
+
+    }
+    public void EyeInvText()
+    {
+        if (isTyping == false)
+        {
+        StartCoroutine(objectText(EyeInvDial, null, null));
+        }
+    }
+
     public IEnumerator objectText (List<string> input, GameObject objectToTurnOn, GameObject objectToDestroy)
     {
-        yield return new WaitForSeconds(0.5f);
         CurrentList = input;
         index = 0;
         textBox.text = "";
@@ -209,5 +302,15 @@ public class TextScript : MonoBehaviour
         }
     }
 
+  public void CloseWindow(GameObject objectToClose)
+    {
+        objectToClose.SetActive(false);
+    }
+    
 
+    IEnumerator WaitGlow ()
+    {
+        yield return new WaitForSeconds(30f);
+        letterGlow.SetActive(true);
+    }
 }

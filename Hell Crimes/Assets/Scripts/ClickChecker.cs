@@ -76,9 +76,66 @@ public class ClickChecker : MonoBehaviour
         {
             textScript.LockGoatText();
         }
-        /*else if (Input.GetMouseButtonDown(0) && gameObject.name == "KEY")
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "papers" && textScript.isTyping == false)
         {
-            textScript.KeyText();
+            textScript.NotesText();
+        }
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "sword" && textScript.isTyping == false)
+        {
+            textScript.SwordText();
+        }
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "Painting" && textScript.isTyping == false)
+        {
+            textScript.PaintingText();
+        }
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "Books" && textScript.isTyping == false)
+        {
+            textScript.BooksText();
+        }
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "Cut up paper" && textScript.isTyping == false)
+        {
+            textScript.PaperText();
+        }
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "crown" && textScript.isTyping == false)
+        {
+            textScript.CabinetText();
+        }
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "heart" && textScript.isTyping == false)
+        {
+            textScript.HeartText();
+        }
+        /*
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "PokerInv" && textScript.isTyping == false)
+        {
+            textScript.PokerInvText();
+        }
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "DaggerInv" && textScript.isTyping == false)
+        {
+            textScript.DaggerInvText();
+        }
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "ScissorsInv" && textScript.isTyping == false)
+        {
+            textScript.ScissorsInvText();
+        }
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "KeyInv" && textScript.isTyping == false)
+        {
+            textScript.KeysInvText();
+        }
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "StoolInv" && textScript.isTyping == false)
+        {
+            textScript.StoolInvText();
+        }
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "ChaliceInv" && textScript.isTyping == false)
+        {
+            textScript.ChaliceInvText();
+        }
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "EyeInv" && textScript.isTyping == false)
+        {
+            textScript.EyeInvText();
+        }
+        else if (Input.GetMouseButtonDown(0) && gameObject.name == "PokerInv" && textScript.isTyping == false)
+        {
+            textScript.PokerInvText();
         }*/
 
         else { }
