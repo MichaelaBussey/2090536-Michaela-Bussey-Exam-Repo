@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TextScript : MonoBehaviour
 {
     public GameObject DialogueUI, Dick, Witch, dBoxWitch, dBoxDick, dBoxExamine, PaperCanvas, PaintingCanvas, FileCanvas;
-    public GameObject Letters, ReRiddle;
+    public GameObject Letters, ReRiddle, Exit;
     public Text textBox;
     private int index;
     public float textSpeed;
@@ -27,6 +27,7 @@ public class TextScript : MonoBehaviour
     // Delete these
     public GameObject POKER, STOOL, Cloth, carpetCorner, DAGGER, Goat, Hanger, KEY, SCISSORS, Riddle, riddleGlow, letterGlow;
     public bool isTyping, keyChecker, pokerChecker, stoolChecker, daggerChecker, scissorsChecker, eyeChecker, chaliceChecker;
+    public bool hasEnded = false;
     // Interactables
     DialogueList dialgoueList; 
 
@@ -36,6 +37,7 @@ public class TextScript : MonoBehaviour
         StartCoroutine(WaitGlow());
         CurrentList = introDial;
         StartCoroutine(Type());
+
         //textBox.text = dialgoueList.GetComponent<Intro>();
     }
 
@@ -53,22 +55,35 @@ public class TextScript : MonoBehaviour
             //isTyping = true; 
         }
 
-        if (chaliceChecker && eyeChecker && (daggerChecker || scissorsChecker))
+        if (chaliceChecker && eyeChecker && (daggerChecker || scissorsChecker) && isTyping == false && hasEnded == false)
         {
-            Witch.SetActive(true);
-            Dick.SetActive(true);
-            CurrentList = OutroDial;
+            hasEnded = true;
+            StartCoroutine(Ending());
         }
+
     }
+
     IEnumerator Type ()
     {
         DialogueUI.SetActive(true);
         foreach(char letter in CurrentList[index].ToCharArray())
-        {
+        {            
+            isTyping = true;
             textBox.text += letter;
             yield return new WaitForSeconds(textSpeed);
-            isTyping = true;
+
         }
+    }
+
+    IEnumerator Ending ()
+    {
+            yield return new WaitForSeconds(0f);
+            hasEnded = true;            
+            print(hasEnded);
+            Witch.SetActive(true);
+            Dick.SetActive(true);
+            Exit.SetActive(true);
+            StartCoroutine(objectText(OutroDial, null, null));
     }
 
     public void NextButton ()
@@ -91,12 +106,15 @@ public class TextScript : MonoBehaviour
 
     public void LetterText ()
     {
+        StopCoroutine(WaitGlow());
         StartCoroutine(objectText(LettersDial, riddleGlow, letterGlow));
+        //letterGlow.SetActive(false);
     }
     public void RiddleText()
     {
         StartCoroutine(objectText(RiddleDial, ReRiddle, Riddle));
-        riddleGlow.SetActive(false);
+        //riddleGlow.SetActive(false);
+        Destroy(riddleGlow);
     }
     public void ReRiddleText()
     {
@@ -105,10 +123,9 @@ public class TextScript : MonoBehaviour
 
     public void PokerText ()
     {
+        StartCoroutine(objectText(POKERDial, PokerInv, POKER));        
         pokerChecker = true;
-        StartCoroutine(objectText(POKERDial, PokerInv, POKER));
     }
-
     public void StoolText()
     {
         stoolChecker = true;
@@ -121,8 +138,8 @@ public class TextScript : MonoBehaviour
     }
     public void ScissorsText()
     {
-        scissorsChecker = true;
         StartCoroutine(objectText(SCISSORSDial, ScissorsInv, SCISSORS));
+        scissorsChecker = true;
     }
 
     public void ClothText()
@@ -141,15 +158,17 @@ public class TextScript : MonoBehaviour
     }
     public void DaggerText()
     {
+        
         StartCoroutine(objectText(DAGGERDial, DaggerInv, DAGGER));
+        daggerChecker = true;
     }
 
     public void BagText ()
     {
         if (keyChecker == true)
-        {
-            chaliceChecker = true;
+        {            
             StartCoroutine(objectText(OpenBagDial, ChaliceInv, KeyInv));
+            chaliceChecker = true;
         }
         else if (keyChecker == false)
         {
@@ -191,6 +210,7 @@ public class TextScript : MonoBehaviour
     public void NotesText()
     {
         PaperCanvas.SetActive(true);
+        ReRiddle.SetActive(false);
         StartCoroutine(objectText(NotesDial, null, null)); //fix to reveal close up of notes
     }
     public void SwordText()
@@ -284,11 +304,18 @@ public class TextScript : MonoBehaviour
         textBox.text = "";
         DialogueUI.SetActive(true);
         Witch.SetActive(false);
-        Dick.SetActive(false);
+        Dick.SetActive(true);
         dBoxWitch.SetActive(false);
         dBoxDick.SetActive(false);
         dBoxExamine.SetActive(true);
         StartCoroutine(Type());
+        
+        if(hasEnded == true)
+        {
+            Witch.SetActive(true);
+            Dick.SetActive(true);
+        } 
+        
         yield return new WaitForSeconds(3f);
 
         if (objectToTurnOn != null)
@@ -300,17 +327,23 @@ public class TextScript : MonoBehaviour
         {
             Destroy(objectToDestroy);
         }
+        else
+        {
+
+        }
+
     }
 
   public void CloseWindow(GameObject objectToClose)
     {
         objectToClose.SetActive(false);
+        ReRiddle.SetActive(true);
     }
     
 
     IEnumerator WaitGlow ()
     {
-        yield return new WaitForSeconds(30f);
+        yield return new WaitForSeconds(35f);
         letterGlow.SetActive(true);
     }
 }

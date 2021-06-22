@@ -37,5 +37,10 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("Intro");
         }
-    
+
+    public void Proceed()
+    {
+        SceneManager.LoadScene("Exit");
+    }
+
 }

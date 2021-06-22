@@ -104,7 +104,7 @@ public class ClickChecker : MonoBehaviour
         {
             textScript.HeartText();
         }
-        /*
+        
         else if (Input.GetMouseButtonDown(0) && gameObject.name == "PokerInv" && textScript.isTyping == false)
         {
             textScript.PokerInvText();
@@ -136,7 +136,7 @@ public class ClickChecker : MonoBehaviour
         else if (Input.GetMouseButtonDown(0) && gameObject.name == "PokerInv" && textScript.isTyping == false)
         {
             textScript.PokerInvText();
-        }*/
+        }
 
         else { }
         }

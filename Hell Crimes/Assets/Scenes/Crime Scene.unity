@@ -584,6 +584,7 @@ GameObject:
   - component: {fileID: 211124924}
   - component: {fileID: 211124923}
   - component: {fileID: 211124926}
+  - component: {fileID: 211124927}
   m_Layer: 5
   m_Name: ChaliceInv
   m_TagString: Untagged
@@ -687,6 +688,164 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PokerClicked: 0
   textScript: {fileID: 812320527}
+--- !u!114 &211124927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211124921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 812320527}
+          m_MethodName: ChaliceInvText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1 &244897700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244897701}
+  - component: {fileID: 244897704}
+  - component: {fileID: 244897703}
+  - component: {fileID: 244897702}
+  m_Layer: 5
+  m_Name: Proceed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &244897701
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244897700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1132172339}
+  m_Father: {fileID: 1917138792}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -67, y: -9.00001}
+  m_SizeDelta: {x: 176.22772, y: 64.26312}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &244897702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244897700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 0.9984277, b: 0.8726415, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.9941596, b: 0.6839622, a: 1}
+    m_PressedColor: {r: 0.9593961, g: 1, b: 0.15566039, a: 1}
+    m_SelectedColor: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 244897703}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 718979676}
+        m_MethodName: Proceed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &244897703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244897700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &244897704
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244897700}
+  m_CullTransparentMesh: 0
 --- !u!1 &253861005
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +978,7 @@ GameObject:
   - component: {fileID: 302547692}
   - component: {fileID: 302547691}
   - component: {fileID: 302547694}
+  - component: {fileID: 302547695}
   m_Layer: 5
   m_Name: DaggerInv
   m_TagString: Untagged
@@ -922,6 +1082,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PokerClicked: 0
   textScript: {fileID: 812320527}
+--- !u!114 &302547695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302547689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 812320527}
+          m_MethodName: DaggerInvText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &306103978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,7 +1366,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
+    m_NormalColor: {r: 1, g: 0.9984277, b: 0.8726415, a: 1}
     m_HighlightedColor: {r: 1, g: 0.9941596, b: 0.6839622, a: 1}
     m_PressedColor: {r: 0.9593961, g: 1, b: 0.15566039, a: 1}
     m_SelectedColor: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
@@ -2246,7 +2434,7 @@ GameObject:
   - component: {fileID: 694380912}
   - component: {fileID: 694380914}
   - component: {fileID: 694380913}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3014,19 +3202,20 @@ MonoBehaviour:
   FileCanvas: {fileID: 526183183}
   Letters: {fileID: 186373802}
   ReRiddle: {fileID: 1515679048}
+  Exit: {fileID: 244897700}
   textBox: {fileID: 759136188}
-  textSpeed: 0.015
+  textSpeed: 0.005
   introDial:
   - 'Gillian:  Why hello, my dear boy. I hear it''s been a long journey from Heaven
     for you. Thank you for-'
-  - "Yes, yes, it\u2019s an honour to meet you and all that hogwash. The name\u2019s
+  - "Dick: Yes, yes, it\u2019s an honour to meet you and all that hogwash. The name\u2019s
     Dick Angel. "
   - 'Gillian: Well, Dick, as you know my daughter Evelyn has gone missing. We suspect
-    the Vampiric vanishing ritual was enacted here upon Evelyn.'
+    the Vampiric vanishing ritual was enacted here.'
   - "Gillian: Not much is known about this ritual. I\u2019ve heard that re-enacting
     the steps can resummon the victim, however. "
-  - I see that in their hurry to flee the scene, they have left some vital clues
-    and tools around here. Heh, amateurs.
+  - 'Dick: I see that in their hurry to flee the scene, they have left some vital
+    clues and tools around here. Heh, amateurs.'
   - 'Gillian: I suggest examining those letters over on the centre coffee table first.'
   LettersDial:
   - "It\u2019s a stack of envelopes, practically screaming to be investigated; how
@@ -3034,7 +3223,7 @@ MonoBehaviour:
   - "\u201CThe peasant routinely goes to the lava creek for herbal gatherings every
     Wednesday, alone \u2013 what an imbecile\u2026"
   - "She is of great use to us, no matter her poverty. She\u2019ll weaken the Coven\u2019s
-    defences and can reveal vital information of their practises to us\u2026"
+    defences and reveal vital inside information to us\u2026"
   - "Using your bat form and the growth vial, you can fly across to seize her and
     carry her back to the ritual chamber\u2026"
   - 'Do not forget the three items required to imprison her in the vanishing realm.
@@ -3045,21 +3234,21 @@ MonoBehaviour:
   RiddleDial:
   - "This must be the crystali-thingamajig. There\u2019s candles and cards here and\u2026
     oh and what\u2019s this?"
-  - "\u201COne might not but showeth their dedication by spilling their blood into
-    only but a royal chalice\u2026  "
+  - "\u201CHumble servants should do naught but showeth dedication by spilling thine
+    own blood into only but the most silver of vessels... "
   - "\u201CWith the blessing o\u2019 our rul'r, his eyes wilt beest within us! rejoiceth
     f'r the divine blessing of our god's almighty pow'rs!\u201D"
   - Hey uh, what the fuck? Get outta here with that cryptic humbug.
   - "I guess it does hint at the three items required for the ritual though. Let\u2019s
     get exploring.  "
   ReRiddleDial:
-  - "\u201COne might not but showeth their dedication by spilling their blood into
-    only but a royal chalice\u2026  "
+  - "\u201CHumble servants should do naught but showeth dedication by spilling thine
+    own blood into only but the most silver of vessels... "
   - "\u201CWith the blessing o\u2019 our rul'r, his eyes wilt beest within us! rejoiceth
     f'r the divine blessing of our god's almighty pow'rs!\u201D"
   OutroDial:
-  - "Oh wow, I got so caught up in the thrill of the chase that I didn\u2019t realise
-    that I had collected all the needed items."
+  - "Dick: Oh wow, I got so caught up in the thrill of the chase that I didn\u2019t
+    realise that I had collected all the needed items."
   - 'Gillian: I''m just glad you cracked the case. Let''s go resummon my darling
     Evelyn, come with me. '
   POKERDial:
@@ -3070,7 +3259,8 @@ MonoBehaviour:
     me a decent boost to reach those high places at the back."
   SCISSORSDial:
   - "Aye, well looky here, barber\u2019s scissors! Nice and sharp. I wonder if heart
-    pie was on the menu today?  The\u2019ll be useful to draw blood for the ritual. "
+    pie was on the menu today? "
+  - "They\u2019ll be useful to draw blood for the ritual."
   DAGGERDial:
   - "Wow, this baddie is still wet with blood. Looks like there are lick marks on
     the blade as well, fuckin vampires, I tell you\u2026"
@@ -3078,7 +3268,7 @@ MonoBehaviour:
     vampire blood off before I use it.
   KEYDial:
   - "Aha, smart guy huh? This is a pretty small key, they have an interesting symbol
-    on them... I feel like I\u2019ve seen that somewhere else around here. "
+    on them... I feel like I\u2019ve seen that somewhere around here. "
   CarpetDial:
   - They really bolted outta here, even left this boujee Persian rug in a mess. What
     a shame, they probably nicked it anyways.
@@ -3105,7 +3295,7 @@ MonoBehaviour:
     something. "
   - If only I could reach it...
   SClothDial:
-  - "I wonder what\u2019s under this cloth, let me climb up with my ladder and- "
+  - "I wonder what\u2019s under this cloth, let me climb up with my stool and- "
   OpenBagDial:
   - "These keys look like they\u2019ll fit this lock, even have the matching symbols
     and all. "
@@ -3128,8 +3318,8 @@ MonoBehaviour:
   - "There\u2019s probably more dangerous weapons around here that could be more
     useful. "
   PaperDial:
-  - "Some snipped up papers. My aging eyes can\u2019t read that blab, but this does
-    imply that there\u2019s a scissor somewhere around here."
+  - "Some snipped up papers. My aging eyes can\u2019t read this nonsense, but this
+    does imply that there\u2019s a scissor somewhere around here."
   BooksDial:
   - "Ooh I recognise some of these classics! \u201CA Study In Scarlet\u201D and \u201CThe
     Hound of The Baskervilles\u201D. These blood suckers have good taste."
@@ -3214,6 +3404,7 @@ MonoBehaviour:
   scissorsChecker: 0
   eyeChecker: 0
   chaliceChecker: 0
+  hasEnded: 0
 --- !u!4 &812320528
 Transform:
   m_ObjectHideFlags: 0
@@ -3450,7 +3641,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &882858934
 RectTransform:
@@ -4008,7 +4199,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &973944062
 RectTransform:
@@ -4026,6 +4217,105 @@ RectTransform:
   - {fileID: 752484660}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1 &990429368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 990429372}
+  - component: {fileID: 990429371}
+  - component: {fileID: 990429370}
+  - component: {fileID: 990429369}
+  m_Layer: 5
+  m_Name: rIDDLEcANVAS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &990429369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990429368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &990429370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990429368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &990429371
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990429368}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &990429372
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990429368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1515679049}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4315,6 +4605,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PokerClicked: 0
   textScript: {fileID: 812320527}
+--- !u!1 &1132172338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1132172339}
+  - component: {fileID: 1132172341}
+  - component: {fileID: 1132172340}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1132172339
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132172338}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 244897701}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1132172340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132172338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 01b345d51ad4ec046a2d052c9a965950, type: 3}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Proceed
+--- !u!222 &1132172341
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132172338}
+  m_CullTransparentMesh: 0
 --- !u!1 &1135108148
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,7 +4787,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1917138792}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4845,6 +5213,7 @@ GameObject:
   - component: {fileID: 1387824133}
   - component: {fileID: 1387824132}
   - component: {fileID: 1387824135}
+  - component: {fileID: 1387824136}
   m_Layer: 5
   m_Name: ScissorsInv
   m_TagString: Untagged
@@ -4948,6 +5317,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PokerClicked: 0
   textScript: {fileID: 812320527}
+--- !u!114 &1387824136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387824130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 812320527}
+          m_MethodName: ScissorsInvText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1393667864
 GameObject:
   m_ObjectHideFlags: 0
@@ -5242,7 +5639,7 @@ GameObject:
   - component: {fileID: 1515679052}
   - component: {fileID: 1515679051}
   - component: {fileID: 1515679050}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: ReRiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5256,17 +5653,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515679048}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7777779, y: 1.7777779, z: 1.7777779}
   m_Children:
   - {fileID: 694380912}
-  m_Father: {fileID: 1917138792}
-  m_RootOrder: 3
+  m_Father: {fileID: 990429372}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -64, y: 154}
+  m_AnchoredPosition: {x: -113.7778, y: 273.77777}
   m_SizeDelta: {x: 80, y: 32.801193}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1515679050
@@ -5863,7 +6260,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1917138792}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5884,7 +6281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.99366176, g: 1, b: 0.7216981, a: 0.5372549}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6149,7 +6546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6457,6 +6854,7 @@ GameObject:
   - component: {fileID: 1877818714}
   - component: {fileID: 1877818713}
   - component: {fileID: 1877818716}
+  - component: {fileID: 1877818717}
   m_Layer: 5
   m_Name: EyeInv
   m_TagString: Untagged
@@ -6560,6 +6958,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PokerClicked: 0
   textScript: {fileID: 812320527}
+--- !u!114 &1877818717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877818711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 812320527}
+          m_MethodName: EyeInvText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1900540682
 GameObject:
   m_ObjectHideFlags: 0
@@ -7147,7 +7573,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1917138792
 RectTransform:
@@ -7163,9 +7589,9 @@ RectTransform:
   - {fileID: 705964757}
   - {fileID: 190588040}
   - {fileID: 1766937674}
-  - {fileID: 1515679049}
   - {fileID: 1156045564}
   - {fileID: 1698795005}
+  - {fileID: 244897701}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7448,6 +7874,7 @@ GameObject:
   - component: {fileID: 2016447262}
   - component: {fileID: 2016447261}
   - component: {fileID: 2016447264}
+  - component: {fileID: 2016447265}
   m_Layer: 5
   m_Name: StoolInv
   m_TagString: Untagged
@@ -7551,6 +7978,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PokerClicked: 0
   textScript: {fileID: 812320527}
+--- !u!114 &2016447265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016447259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 812320527}
+          m_MethodName: StoolInvText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2032221780
 GameObject:
   m_ObjectHideFlags: 0
@@ -7564,6 +8019,7 @@ GameObject:
   - component: {fileID: 2032221783}
   - component: {fileID: 2032221782}
   - component: {fileID: 2032221785}
+  - component: {fileID: 2032221786}
   m_Layer: 5
   m_Name: KeyInv
   m_TagString: Untagged
@@ -7667,6 +8123,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PokerClicked: 0
   textScript: {fileID: 812320527}
+--- !u!114 &2032221786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032221780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 812320527}
+          m_MethodName: KeysInvText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2067778650
 GameObject:
   m_ObjectHideFlags: 0
